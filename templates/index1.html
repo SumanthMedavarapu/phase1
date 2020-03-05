@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TransportChatBot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <link rel="stylesheet" type="text/css" href="static/Style1.css">
+    <!--<link rel="stylesheet" type="text/css" href="/static/style.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <body>
+        <!--Navigationbar-->
+ <header id="HeaderSection">
+ <nav class="navbar navbar-expand-md navbar-light fixed-top py-2">
+<div class="container">
+<button class="navbar-toggler bg-white" data-toggle="collapse" data-target="#NavBar">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a href="index.html" class="navbar-brand"><h3>TransportChatBot</h3></a>
+<div class="collapse navbar-collapse" id="NavBar">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item"><a href="#" class="nav-link"><img src="static/home.jpg" class="img-fluid" width="20px" height="20px">Home</a></li>
+<li class="nav-item"><a href="login.html" class="nav-link"><img src="static/login.png" class="img-fluid" width="20px" height="20px">Login</a></li>
+<li class="nav-item"><a href="signup.html" class="nav-link"><img src="static/signup.png" class="img-fluid" width="20px" height="20px">Signup</a></li>
+ </ul>
+</div>
+</div>
+</nav>
+
+ <div id="MainSection">
+<div class="container">
+<div class="row">
+
+            <!--first section-->
+            <!--first-->
+<div class="col-sm-5">
+<!-- <div class="mt-0"> -->
+<!-- <a href="#"><img src="umkc.jpg" width="612px" height="320" class="img-fluid mt-3"></a>
+<a href="https://www.umkc.edu/"><h5>University of Missouri Kansascity</h5></a>
+<p class="text-muted">Established in 1933</p>
+<p class="lead text-justify">The University of Missouri–Kansas City is a public research university in Kansas City, Missouri. UMKC is one of four campuses that collectively constitute the University of Missouri System</p> -->
+<p class="text-justify">A bot is an artificial intelligence software designed to perform a series of tasks on its own and without the help of a human being. Tasks a bot can do can vary from things such as making a reservation at a restaurant, marking a date on the calendar or collecting
+and displaying information to its users, and informing the user about the weather, etc. Chatbots are capable of simulating a conversation with a person and therefore are increasingly present in messaging applications.
+Chatbots are versatile, therefore they’re able to adapt and help solve different business pains.A chatbot is a software system, which can interact or “chat” with a human user in natural language (such as English, or whatever other language the chatbot has been built on).
+Chatbots can help inform a user, or help them with fulfilling a task.In a rule-based approach, a bot answers questions based on some rules on which it is trained on. The rules defined can be very simple to very complex. The creation of these bots are
+relatively straightforward using some rule-based approach, but the bot is not efficient in answering questions, whose pattern does not match with the rules on which the bot is trained.However, for a chatbot to be able to do more than simply answer questions it has to be connected to an Artificial Intelligence (AI).
+ AI is the technology that allows the bot to learn from the interactions it has with the end users.
+</p>
+<!-- <div class="col"> -->
+
+
+</div>
+
+
+
+<div class="col-lg-7">
+    
+    <a href="#"><img src="static/chatbot.png" alt="chatbot" width="500" height="500"></a>
+    <button id="button"type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ChatBot</button>
+    
+    
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+    
+      <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Chat with Robot</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+          </div>
+          <div class="modal-body">
+            
+
+
+            <div>
+            <div id="chatbox">
+            <p class="botText"><span>Hi! I'm Chatterbot.</span></p>
+            </div>
+            <div id="userInput">
+            <input id="textInput" type="text" name="msg" placeholder="Message">
+            <input id="buttonInput" type="submit" value="Send">
+            </div>
+            <script>
+            function getBotResponse() {
+            var rawText = $("#textInput").val();
+            var userHtml = '<p class="userText" style="text-align: right;color:green;"><span>' + rawText + '</span></p>';
+            $("#textInput").val("");
+            $("#chatbox").append(userHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            $.get("/get", { msg: rawText }).done(function(data) {
+            var botHtml = '<p class="botText" style="text-align: left;color:red;"><span>' + data + '</span></p>';
+            $("#chatbox").append(botHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            });
+            }
+            $("#textInput").keypress(function(e) {
+            if(e.which == 13) {
+            getBotResponse();
+            }
+            });
+            $("#buttonInput").click(function() {
+            getBotResponse();
+            })
+            </script>
+            </div>
+
+
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+</div>
+</div>
+</div> 
+
+<div id= "Footer">
+    <div class="container bg-dark text-white">
+        <h3 align="center">Designed and Developed by Team-5</h3>
+    </div>
+    </div>
+
+
+</header>
+</body>
+</html>

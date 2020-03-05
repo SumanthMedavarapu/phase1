@@ -1,0 +1,24 @@
+#HeaderSection .navbar
+{
+    background: black;
+    border-bottom: #FFF 03px solid;
+    margin-bottom: 50px;
+    /* padding:230px; */
+
+}
+#HeaderSection .navbar a
+{
+    color : #FFF;
+}
+#MainSection .container{
+    padding-top:70px;
+}
+/* #SideBar{
+align: "right";
+} */
+#button {
+	width:198px;
+	height:198px;
+  float: center;
+  position: relative;
+}
